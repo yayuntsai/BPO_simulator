@@ -107,7 +107,7 @@ h1{
 
 .table{
     border-width:3px;
-    background-color: #f1f3f4;
+    /* background-color: #f1f3f4; */
     padding:30px;
     height: auto;
     text-align: center;
@@ -116,7 +116,7 @@ h1{
 }
 
 .btn {
-  border: 1px solid black;
+  border: 2px solid #a6b1e1;
   border-radius: 3px;
   width: 100px;
   height: 40px;
@@ -149,9 +149,11 @@ input[type=number]:focus {
 
 
 table {
- width:100%;
-    margin:15px 0;
-    margin-top: 100px;
+ width:70%;
+ border: 2px solid #a6b1e1;
+  margin:15px 0;
+  margin-top: 100px;
+  margin: 20px auto;
 }
 th {
  background-color:#96A5FF;
@@ -159,14 +161,21 @@ th {
 }
 table,table th,table td
 {
- font-size: 0.95em;
+ font-size: 1em;
  text-align: center;
- padding: 4px;
  border-collapse: collapse;
- height: 50px;
+ height: 40px;
 }
 table tr{
   broder: 1px solid #f4eeff;
+  height: 40px;
+}
+table tr:first-child{
+  background-color: #a6b1e1;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 50px;
 }
 /* table tr:nth-child(odd){
  background-color:#f4eeff;
@@ -206,8 +215,8 @@ table tr:nth-child(even){
 }
 
 .clock {
-  width: 10rem;
-  height: 10rem;
+  width: 8rem;
+  height: 8rem;
   border: 2px solid #545271;
   border-radius: 50%;
   margin: 0px auto;

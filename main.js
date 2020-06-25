@@ -28,7 +28,7 @@ function run(btn_type) {
       var servers = { name: [], end_time: [] };
       //用物件紀錄服務生名字和他上一次結束的時間，預設為0
       for (var i = 0; i < servers_num; i++) {
-          servers.name.push('服務生' + (i + 1) + "號");
+          servers.name.push(i + 1);
           servers.end_time.push(0);
       }
       var run = document.querySelector('.R').value;
@@ -38,7 +38,7 @@ function run(btn_type) {
       var queue = 0;
       //第一位客人的開始時間等於他到達的時間
       var start_time = arrival_time;
-      var str = "<table border='1'> <tr><td>客戶編號</td><td>Drink Type</td><td>排隊人數</td><td>誰正在被服務中</td><td>到達時間</td><td>開始時間</td><td>服務結束</td><td>服務時間</td><td>服務生</td></tr>";
+      var str = "<table border='1'> <tr><td>Customer</td><td>Drink Type</td><td>Waiting</td><td>In system</td><td>Arrival time</td><td>Start time</td><td>Service End</td><td>Server</td></tr>";
       var end_time = 0;
       var min_end_time = 1;
       var who_service_now = 0;
@@ -150,18 +150,18 @@ function run(btn_type) {
                       in_queue_str += ' , ' + customer_data.id[j].toString();;
                   }
               }
-              var drink_type = (Math.random()>0.5)? 1 : 0;
+              var drink_type = Math.floor(Math.random() * 3) + 1
               if(drink_type == 1){
-                drink_type_img = '<img src="bubble-tea.png" alt="" width="20px">'
+                drink_type_img = '<img src="bubble-tea.png" alt="" width="30px">'
+              }else if(drink_type == 2){
+                drink_type_img = '<img src="drink.png" alt="" width="30px">'
               }else{
-                drink_type_img = '<img src="drink.png" alt="" width="20px">'
+                drink_type_img = '<img src="milkshake.png" alt="" width="30px">'
               }
-              //var drink_type_img;
-              //drink_type_img = drink_type = 1 ? '<img src="bubble-tea.png" alt="" width="20px">' : '<img src="drink.png" alt="" width="20px">'
           }
 
           queue = customer_data.id[i - 1] - max_id;
-          str += "<tr><td>" + i + "</td><td>" + drink_type_img + "</td><td>" + queue + "</td><td>" + in_queue_str + "</td><td>" + arrivalhour + ":" + arrivalmin + ":" + arrivalsec + "</td><td>" + starthour + ":" + startmin + ":" + startsec + "</td><td>" + endhour + ":" + endmin + ":" + endsec + "</td><td>" + dur + "</td><td>" + servers.name[who_service_now] + "</td></tr>";
+          str += "<tr><td>" + i + "</td><td>" + drink_type_img + "</td><td>" + queue + "</td><td>" + in_queue_str + "</td><td>" + arrivalhour + ":" + arrivalmin + ":" + arrivalsec + "</td><td>" + starthour + ":" + startmin + ":" + startsec + "</td><td>" + endhour + ":" + endmin + ":" + endsec + "</td><td>" + servers.name[who_service_now] + "</td></tr>";
       }
       str += "</table>";
       document.getElementById("output").innerHTML = str;
