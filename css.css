@@ -58,7 +58,7 @@ h1{
 }
 
 .input-group-text{
-  width: 300px;
+  width: 200px;
 }
 
 .container{
@@ -69,7 +69,6 @@ h1{
     border-width:3px;
     background-color: #f1f3f4;
     padding:30px;
-    width: 400px;
     height: auto;
     text-align: center;
     margin:0px auto;
@@ -105,12 +104,6 @@ input[type=number]:focus {
   }
 
 
-table
-{
-width:100%;
-}
-
-
 table {
  width:100%;
     margin:15px 0;
@@ -120,18 +113,17 @@ th {
  background-color:#96A5FF;
  color:#FFFFFF
 }
-table,table th,.table td
+table,table th,table td
 {
- font-size:0.95em;
- text-align:center;
- padding:4px;
- border:1px solid #7387fe;
- border-collapse:collapse
+ font-size: 0.95em;
+ text-align: center;
+ padding: 4px;
+ border-collapse: collapse;
 }
 table tr:nth-child(odd){
- background-color:#4CAF50;
+ background-color:#f4eeff;
 }
-.table tr:nth-child(even){
+table tr:nth-child(even){
  background-color:#fdfdfd;
 }
 .love_you{
@@ -142,10 +134,10 @@ table tr:nth-child(odd){
 }
 .simulate_area{
   margin: 0 auto;
-  width: 1000px;
+  /* width: 1000px; */
 }
 #inqueue{
-  background-color:#f4eeff;
+  /* background-color:#f4eeff; */
   width: 300px;
   height: 300px;
   float: left;

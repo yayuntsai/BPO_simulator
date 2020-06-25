@@ -161,7 +161,6 @@ function run(btn_type) {
       var tmp_simulate_id = simulate_id;
       var count = 0;
       var tID = setInterval(showTime, speed);
-      // var stopTime = setInterval(stopTime, speed);
       var time_str="";
     }else{
       var tID = setInterval(stopTime, speed);
@@ -230,7 +229,7 @@ function run_addq() {
     var q_str = '';
     q_count++;
     for (var i = 0; i < q_count; i++) {
-        q_str += '<div class="div" style="width:50px;height:50px;float:left" ><img src="circle.png" alt=""width="50px" height="50px"></div>'
+        q_str += '<div class="div" style="width:50px;height:50px;float:left" ><img src="girl.png" alt=""width="50px" height="50px"></div>'
     }
     document.getElementById("inqueue").innerHTML = q_str;
 }
@@ -244,12 +243,12 @@ function run_delq() {
         q_count--;
     }
     for (var i = 0; i < q_count; i++) {
-        q_str += '<div class="div" style="width:50px;height:50px;float:left" ><img src="circle.png" alt=""width="50px" height="50px"></div>'
+        q_str += '<div class="div" style="width:50px;height:50px;float:left" ><img src="girl.png" alt=""width="50px" height="50px"></div>'
     }
     var s_str = '';
     s_count++;
     for (var i = 0; i < s_count; i++) {
-        s_str += '<div class="div" style="width:50px;height:50px;float:left" ><img src="circle.png" alt=""width="50px" height="50px"></div>'
+        s_str += '<div class="div" style="width:50px;height:50px;float:left" ><img src="girl.png" alt=""width="50px" height="50px"></div>'
     }
     document.getElementById("inqueue").innerHTML = q_str;
     document.getElementById("inservice").innerHTML = s_str;
@@ -263,13 +262,13 @@ function run_dels() {
         s_count--;
     }
     for (var i = 0; i < s_count; i++) {
-        s_str += '<div class="div" style="width:50px;height:50px;float:left" ><img src="circle.png" alt=""width="50px" height="50px"></div>'
+        s_str += '<div class="div" style="width:50px;height:50px;float:left" ><img src="girl.png" alt=""width="50px" height="50px"></div>'
     }
     var o_str = '';
     o_count++;
     for (var i = 0; i < o_count; i++) {
-        o_str += '<div class="div" style="width:50px;height:50px;float:left" ><img src="circle.png" alt=""width="50px" height="50px"></div>'
+        o_str += '<div class="div" style="width:50px;height:50px;float:left" ><img src="girl.png" alt=""width="50px" height="50px"></div>'
     }
-    document.getElementById("out").innerHTML = o_str;
+    // document.getElementById("out").innerHTML = o_str;
     document.getElementById("inservice").innerHTML = s_str;
 }
