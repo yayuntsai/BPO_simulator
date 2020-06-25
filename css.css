@@ -80,16 +80,20 @@ h1{
   margin-right: auto;
 }
 
+.item_name{
+  font-size: 20px;
+}
 .item_name img{
-  width: 100px;
+  width: 120px;
+  padding: 10px;
 }
 
 .item_title{
   text-align: center;
   font-size: 23px;
   font-weight: 500;
-  height: 80px;
-  padding: 20px;
+  height: 50px;
+  /* padding: 20px; */
 }
 
 .item_content{
@@ -97,22 +101,38 @@ h1{
   text-align: center;
 }
 
+.item_title .col-9, .item_title .col-3{
+  background-color: #f4eeff;
+  /* width: 70%; */
+  font-weight: 400;
+  border: 5px solid #fff;
+}
+
 .input-group-text{
   width: 200px;
+  height: 30px;
+}
+
+.input-group input{
+  height: 30px;
 }
 
 .container{
   width: 100%
+  margin: 20px auto;
 }
 
 .table{
     border-width:3px;
-    /* background-color: #f1f3f4; */
+    background-color: #f1f3f4;
     padding:30px;
-    height: auto;
     text-align: center;
     margin:0px auto;
     float:left;
+}
+
+.table input{
+  border: none;
 }
 
 .btn {
@@ -136,6 +156,10 @@ h1{
 
 .btn:focus {
   border: none;
+}
+
+.send .stop{
+  border: 1px solid #000;
 }
 
 input[type=number] {
@@ -194,22 +218,22 @@ table tr:nth-child(even){
   /* width: 1000px; */
 }
 #inqueue{
-  /* background-color:#f4eeff; */
+  background-color:#f4eeff;
   width: 300px;
-  height: 300px;
+  height: 200px;
   float: left;
 }
 #inservice{
   background-color:#dcd6f7;
   width: 300px;
-  height: 300px;
+  height: 200px;
   /* margin-left: 50px; */
   float: left;
 }
 #out{
   background-color:#a6b1e1;
   width: 300px;
-  height: 300px;
+  height: 200px;
   /* margin-left: 50px; */
   float: left;
 }
@@ -221,8 +245,8 @@ table tr:nth-child(even){
   border-radius: 50%;
   margin: 0px auto;
   /* position: relative; */
-  -webkit-box-shadow: 0 20px 30px rgba(104,75,106,0.65);
-  -moz-box-shadow: 0 20px 30px rgba(104,75,106,0.65);
+  /* -webkit-box-shadow: 0 20px 30px rgba(104,75,106,0.65);
+  -moz-box-shadow: 0 20px 30px rgba(104,75,106,0.65); */
   /* box-shadow: 0 20px 30px rgba(104,75,106,0.65); */
   background: #545271;
 }
@@ -233,9 +257,9 @@ table tr:nth-child(even){
   height: 100%;
   border-radius: 100%;
   background: #fefefc;
-  -webkit-box-shadow: 0 20px 10px rgba(62,47,63,0.45);
-  -moz-box-shadow: 0 20px 10px rgba(62,47,63,0.45);
-  box-shadow: 0 20px 10px rgba(62,47,63,0.45);
+  /* -webkit-box-shadow: 0 10px 10px rgba(62,47,63,0.45);
+  -moz-box-shadow: 0 10px 10px rgba(62,47,63,0.45);
+  box-shadow: 0 10px 10px rgba(62,47,63,0.45); */
   overflow: hidden;
 }
 

@@ -11,33 +11,30 @@
     <div class="shop">
       <span class="shop_name">BPOOOOOOO TEA</div>
       <div class="row item_title">
-        <div class="col-3">
-          <span>Bubble tea</span>
+        <div class="col-9">
+          <span>MENU</span>
         </div>
         <div class="col-3">
-          <span>Lemonade</span>
-        </div>
-        <div class="col-3">
-          <span>Milkshake</span>
-        </div>
-        <div class="col-3">
-          <span>Opening hours</span>
+          <span>OPENING TIME</span>
         </div>
       </div>
       <div class="row item_content">
         <div class="col-3">
           <div class="item_name">
-            <img src="bubble-tea.png" alt="">
+            <img src="bubble-tea.png" alt=""><br>
+              <span>Bubble tea</span>
           </div>
         </div>
         <div class="col-3">
           <div class="item_name">
-            <img src="drink.png" alt="">
+            <img src="drink.png" alt=""><br>
+            <span>Lemonade</span>
           </div>
         </div>
         <div class="col-3">
           <div class="item_name">
-            <img src="milkshake.png" alt="">
+            <img src="milkshake.png" alt=""><br>
+              <span>Milkshake</span>
           </div>
         </div>
         <div class="col-3">
@@ -72,31 +69,31 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="addon-wrapping">Arrival rate(in minute)</span>
                 </div>
-                <input type="number" name="" class="AR" value="50" placeholder="arrival time">
+                <input type="text" name="" class="AR" value="50" placeholder="arrival time">
               </div>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="addon-wrapping">Service rate(in minute)</span>
                 </div>
-                <input type="number" name="" class="SR" value="0.95" placeholder="service rate">
+                <input type="text" name="" class="SR" value="0.95" placeholder="service rate">
               </div>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="addon-wrapping">Number of servers</span>
                 </div>
-                <input type="number" name="" class="S" value="1" placeholder="servers">
+                <input type="text" name="" class="S" value="1" placeholder="servers">
               </div>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="addon-wrapping">Simulation time</span>
                 </div>
-                <input type="number" class="R" value="50" placeholder="simulation time">
+                <input type="text" class="R" value="50" placeholder="simulation time">
               </div>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="addon-wrapping">Simulate speed(in ms)</span>
                 </div>
-                <input type="number" class="SS" value="50" placeholder="speed">
+                <input type="text" class="SS" value="50" placeholder="speed">
               </div>
               <input type="button" class="btn send" value="Simulate" onclick="run(this.value)">
               <input type="button" class="btn stop" value="Stop" onclick="run(this.value)">

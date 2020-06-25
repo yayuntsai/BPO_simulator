@@ -26,7 +26,6 @@ function run(btn_type) {
 
       var servers_num = document.querySelector('.S').value; servers_num = parseInt(servers_num);
       var servers = { name: [], end_time: [] };
-      //用物件紀錄服務生名字和他上一次結束的時間，預設為0
       for (var i = 0; i < servers_num; i++) {
           servers.name.push(i + 1);
           servers.end_time.push(0);
