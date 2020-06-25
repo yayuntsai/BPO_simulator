@@ -11,8 +11,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -23,7 +23,7 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
@@ -47,103 +47,61 @@ table {
 }
 
 body{
-     font-family: Comic Sans MS;
+     /* font-family: Comic Sans MS; */
      line-height: 30px;
    }
-
-.xiaohui img{
-    height: 374px;
-    width: 250px;
-    float:left;
-    margin: 0 auto;
-}   
-.genie img{
-    height: 374px;
-    width: 250px;
-    float:left;
-    margin: 0 auto;
-}   
-
 
 h1{
     text-align: center;
     font-size: 40px;
-    line-height: 60px;   
+    line-height: 60px;
 }
 .table{
     border-width:3px;
-    border-style:dashed;
-    border-color:#4CAF50;
+    background-color: #f1f3f4;
     padding:30px;
     width: 350px;
     height: auto;
     text-align: center;
     margin:0px auto;
     float:left;
-    
+}
+.table input{
+  height: 50px;
+  width: 250px;
+  border: none;
 }
 
-.send {
-    font-family: Comic Sans MS;
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;   
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-  }
-  
-  .send:hover {background-color: #3e8e41}
-  
-  .send:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
-/* .send{
-    cursor: pointer;
-    background-color: rgb(247, 147, 41);
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px; 
+.btn {
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 100px;
+  height: 40px;
+  padding 12px 25px;
+  display: block;
+  background: linear-gradient(to right, #a6b1e1 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .3s ease-out;
 }
 
-.send:hover{
-    cursor: pointer;
-    background-color: rgb(248, 191, 126);
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px; 
-    transition: all 0.5s;
-
-
-} */
+.btn:hover {
+  cursor: pointer;
+  color: white;
+  background-position: left bottom;
+}
 
 input[type=number] {
  padding: 5px 12px;
  margin: 10px 5px;
- box-sizing: border-box; 
+ box-sizing: border-box;
 }
 input[type=number]:focus {
     border: 3px solid #4CAF50;
   }
 
 
-table 
+table
 {
 width:100%;
 }
@@ -183,22 +141,22 @@ table tr:nth-child(odd){
   width: 1000px;
 }
 #inqueue{
-  background-color:#FFD382;
+  background-color:#f4eeff;
   width: 300px;
   height: 300px;
   float: left;
 }
 #inservice{
-  background-color:#82FF82;
+  background-color:#dcd6f7;
   width: 300px;
   height: 300px;
-  margin-left: 50px;
+  /* margin-left: 50px; */
   float: left;
 }
 #out{
-  background-color:#30FFFF;
+  background-color:#a6b1e1;
   width: 300px;
   height: 300px;
-  margin-left: 50px;
+  /* margin-left: 50px; */
   float: left;
 }
