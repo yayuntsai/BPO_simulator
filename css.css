@@ -2,8 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Cuprum:400,700);
 @import url(https://fonts.googleapis.com/css?family=Abel);
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+html, body, div, span, applet, object, iframe, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -53,23 +52,28 @@ body{
 
 h1{
     text-align: center;
-    font-size: 40px;
-    line-height: 60px;
+    font-size: 30px;
+    line-height: 80px;
+    padding: 50px;
 }
+
+.input-group-text{
+  width: 300px;
+}
+
+.container{
+  width: 100%
+}
+
 .table{
     border-width:3px;
     background-color: #f1f3f4;
     padding:30px;
-    width: 350px;
+    width: 400px;
     height: auto;
     text-align: center;
     margin:0px auto;
     float:left;
-}
-.table input{
-  height: 50px;
-  width: 250px;
-  border: none;
 }
 
 .btn {

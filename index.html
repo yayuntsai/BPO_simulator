@@ -3,40 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Queuing Models - 等候理論模擬器</title>
+    <title>Simulator_group3</title>
     <link rel="stylesheet" type = "text/css" href="css.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <h1>BPO Simulator<br/>
-    <div class="table">
-        Business hour <input type="time" name="" id=""class="time" value="10:30"></br>
-        Arrival rate (m) <input type="number" name="" class="AR" value="35"></br>
-        Service rate  (m)<input type="number" name="" class="SR" value="0.75"></br>
-        Servers <input type="number" name="" class="S" value="1"></br>
-        Simulation times<input type="number" class="R" value="50"></br>
-        Simulate speed(ms)<input type="number" class="SS" value="30"></br>
-        <input type="button" class="btn send" value="Simulate" onclick="run(this.value)">
-        <input type="button" class="btn stop" value="Stop" onclick="run(this.value)">
+    <h1>BPO Simulator_group3<br/></h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="table">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">Start hour </span>
+                </div>
+                <input type="time" name="" id=""class="time" value="10:30" placeholder="start time">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">Arrival rate(in minute)</span>
+                </div>
+                <input type="number" name="" class="AR" value="35" placeholder="arrival time">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">Service rate(in minute)</span>
+                </div>
+                <input type="number" name="" class="SR" value="0.75" placeholder="service rate">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">Number of servers</span>
+                </div>
+                <input type="number" name="" class="S" value="1" placeholder="servers">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">Simulation time</span>
+                </div>
+                <input type="number" class="R" value="50" placeholder="simulation time">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">Simulate speed(in ms)</span>
+                </div>
+                <input type="number" class="SS" value="30" placeholder="speed">
+              </div>
+              <input type="button" class="btn send" value="Simulate" onclick="run(this.value)">
+              <input type="button" class="btn stop" value="Stop" onclick="run(this.value)">
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="simulate_area" style="">
+            <div id="simulate"></div>
+            <div id="inqueue" style="">Waiting</div>
+            <div id="inservice"style="">In System</div>
+            <div id="out" style="">Leave</div>
+            <div class="clear" style="clear:both"></div>
+          </div>
+        </div>
+
+      </div>
     </div>
-
-</div>
-<div class="simulate_area" style=""><div id="simulate"></div>
-<div id="inqueue" style="">Waiting</div>
-<div id="inservice"style="">In System</div>
-<div id="out" style="">Leave</div>
-<div class="clear" style="clear:both"></div>
-</div>
-
-        <div class=".table3_1 " id="output"></div>
-
-
-        <!-- <img src="circle.png" alt="" width="50px" height="50px"> -->
-
-        <!-- <input type="button" class="addq" value="addq" >
-        <input type="button" class="delqadds" value="delq+adds" >
-        <input type="button" class="dels" value="dels" > -->
-
-   <script src="main.js"></script>
-
+    <div class=".table3_1 " id="output"></div>
+    <script src="main.js"></script>
 </body>
 </html>
