@@ -18,7 +18,8 @@ function run(btn_type) {
           arrival_rate = parseFloat(arrival_rate);
       var service_rate = document.querySelector('.SR').value;
           service_rate = parseFloat(service_rate);
-      var speed = document.querySelector('.SS').value; speed = parseFloat(speed);
+      var speed = document.querySelector('.SS').value;
+          speed = parseFloat(speed);
       var const_servicetime = 1 / service_rate * 60;
 
 
@@ -168,7 +169,7 @@ function run(btn_type) {
 
 
     function showTime() {
-        document.getElementById("simulate").innerHTML = time_str;
+        // document.getElementById("simulate").innerHTML = time_str;
         var now_time = open_time2 + count;
         var now_time_hour = parseInt(now_time/3600);
         var now_time_min = parseInt(now_time/60%60);
@@ -196,15 +197,24 @@ function run(btn_type) {
         if (count >= (customer_data.end_time[run - 1] - open_time2) || tmp_simulate_id != simulate_id) {
             clearInterval(tID);
         }
+
+        const secondHand = document.querySelector('.second-hand');
+        const minsHand = document.querySelector('.min-hand');
+        const hourHand = document.querySelector('.hour-hand');
+        var seconds = now_time_sec;
+        var secondsDegrees = ((seconds / 60) * 360) + 90;
+        secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+
+        var mins = now_time_min ;
+        var minsDegrees = ((mins / 60) * 360) + ((seconds/60)*6) + 90;
+        minsHand.style.transform = `rotate(${minsDegrees}deg)`;
+
+        var hour = now_time_hour;
+        var hourDegrees = ((hour / 12) * 360) + ((mins/60)*30) + 90;
+        hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+        console.log(secondHand,minsHand,hourHand)
+
     }
-    // function stopTime(){
-    //   console.log(tID)
-    //   var time_str="";
-    //   document.getElementById("simulate").innerHTML = time_str;
-    //   var now_time = 0;
-    //   time_str = '目前時間'+ now_time_hour+":"+now_time_min+':'+now_time_sec;
-    //   clearInterval(tID);
-    // }
 }
 
 
