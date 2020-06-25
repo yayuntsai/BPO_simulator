@@ -23,6 +23,7 @@ function run(btn_type) {
       var const_servicetime = 1 / service_rate * 60;
 
 
+
       var servers_num = document.querySelector('.S').value; servers_num = parseInt(servers_num);
       var servers = { name: [], end_time: [] };
       //用物件紀錄服務生名字和他上一次結束的時間，預設為0
@@ -37,7 +38,7 @@ function run(btn_type) {
       var queue = 0;
       //第一位客人的開始時間等於他到達的時間
       var start_time = arrival_time;
-      var str = "<table border='1'> <tr><td>客戶編號</td><td>排隊人數</td><td>誰正在被服務中</td><td>到達時間</td><td>開始時間</td><td>服務結束</td><td>服務時間</td><td>服務生</td></tr>";
+      var str = "<table border='1'> <tr><td>客戶編號</td><td>Drink Type</td><td>排隊人數</td><td>誰正在被服務中</td><td>到達時間</td><td>開始時間</td><td>服務結束</td><td>服務時間</td><td>服務生</td></tr>";
       var end_time = 0;
       var min_end_time = 1;
       var who_service_now = 0;
@@ -149,10 +150,18 @@ function run(btn_type) {
                       in_queue_str += ' , ' + customer_data.id[j].toString();;
                   }
               }
+              var drink_type = (Math.random()>0.5)? 1 : 0;
+              if(drink_type == 1){
+                drink_type_img = '<img src="bubble-tea.png" alt="" width="20px">'
+              }else{
+                drink_type_img = '<img src="drink.png" alt="" width="20px">'
+              }
+              //var drink_type_img;
+              //drink_type_img = drink_type = 1 ? '<img src="bubble-tea.png" alt="" width="20px">' : '<img src="drink.png" alt="" width="20px">'
           }
 
           queue = customer_data.id[i - 1] - max_id;
-          str += "<tr><td>" + i + "</td><td>" + queue + "</td><td>" + in_queue_str + "</td><td>" + arrivalhour + ":" + arrivalmin + ":" + arrivalsec + "</td><td>" + starthour + ":" + startmin + ":" + startsec + "</td><td>" + endhour + ":" + endmin + ":" + endsec + "</td><td>" + dur + "</td><td>" + servers.name[who_service_now] + "</td></tr>";
+          str += "<tr><td>" + i + "</td><td>" + drink_type_img + "</td><td>" + queue + "</td><td>" + in_queue_str + "</td><td>" + arrivalhour + ":" + arrivalmin + ":" + arrivalsec + "</td><td>" + starthour + ":" + startmin + ":" + startsec + "</td><td>" + endhour + ":" + endmin + ":" + endsec + "</td><td>" + dur + "</td><td>" + servers.name[who_service_now] + "</td></tr>";
       }
       str += "</table>";
       document.getElementById("output").innerHTML = str;
@@ -169,12 +178,12 @@ function run(btn_type) {
 
 
     function showTime() {
-        // document.getElementById("simulate").innerHTML = time_str;
+        document.getElementById("clock_time").innerHTML = time_str;
         var now_time = open_time2 + count;
         var now_time_hour = parseInt(now_time/3600);
         var now_time_min = parseInt(now_time/60%60);
         var now_time_sec = parseInt(now_time%60);
-        time_str = '目前時間'+ now_time_hour+":"+now_time_min+':'+now_time_sec;
+        time_str = now_time_hour+":"+now_time_min+':'+now_time_sec;
         count++;
         var temp_count = open_time2 + count;
 
@@ -212,8 +221,6 @@ function run(btn_type) {
         var hour = now_time_hour;
         var hourDegrees = ((hour / 12) * 360) + ((mins/60)*30) + 90;
         hourHand.style.transform = `rotate(${hourDegrees}deg)`;
-        console.log(secondHand,minsHand,hourHand)
-
     }
 }
 

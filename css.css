@@ -80,18 +80,21 @@ h1{
   margin-right: auto;
 }
 
-.item_name{
-  background-color: #888888;
-}
 .item_name img{
   width: 100px;
-  /* height: 40px; */
 }
 
 .item_title{
   text-align: center;
   font-size: 23px;
   font-weight: 500;
+  height: 80px;
+  padding: 20px;
+}
+
+.item_content{
+  height: 300px;
+  text-align: center;
 }
 
 .input-group-text{
@@ -131,6 +134,10 @@ h1{
   background-position: left bottom;
 }
 
+.btn:focus {
+  border: none;
+}
+
 input[type=number] {
  padding: 5px 12px;
  margin: 10px 5px;
@@ -156,13 +163,17 @@ table,table th,table td
  text-align: center;
  padding: 4px;
  border-collapse: collapse;
+ height: 50px;
 }
-table tr:nth-child(odd){
+table tr{
+  broder: 1px solid #f4eeff;
+}
+/* table tr:nth-child(odd){
  background-color:#f4eeff;
 }
 table tr:nth-child(even){
  background-color:#fdfdfd;
-}
+} */
 .love_you{
     margin: 0 auto;
     width: 966px;
@@ -199,7 +210,7 @@ table tr:nth-child(even){
   height: 10rem;
   border: 2px solid #545271;
   border-radius: 50%;
-  /* margin: 50px auto; */
+  margin: 0px auto;
   /* position: relative; */
   -webkit-box-shadow: 0 20px 30px rgba(104,75,106,0.65);
   -moz-box-shadow: 0 20px 30px rgba(104,75,106,0.65);
