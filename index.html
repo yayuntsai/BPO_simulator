@@ -8,7 +8,47 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <h1>BPO Simulator_group3<br/></h1>
+    <div class="shop">
+      <span class="shop_name">BPOOOOOOO TEA</div>
+      <div class="row item_title">
+        <div class="col-4">
+          <span>Drink1</span>
+        </div>
+        <div class="col-4">
+          <span>Drink2</span>
+        </div>
+        <div class="col-4">
+          <span>Opening hours</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <div class="item_name">
+            <img src="bubble-tea.png" alt="">
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="item_name">
+            <img src="drink.png" alt="">
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="clock" id="clock">
+            <div class="outer-clock-face">
+              <div class="marking marking-one"></div>
+              <div class="marking marking-two"></div>
+              <div class="marking marking-three"></div>
+              <div class="marking marking-four"></div>
+              <div class="inner-clock-face">
+                <div class="hand hour-hand"></div>
+                <div class="hand min-hand"></div>
+                <div class="hand second-hand"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div>
     <div class="container">
       <div class="row">
         <div class="col-6">
@@ -17,19 +57,19 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="addon-wrapping">Start hour </span>
                 </div>
-                <input type="time" name="" id=""class="time" value="10:30" placeholder="start time">
+                <input type="time" name="" id=""class="time" value="10:00" placeholder="start time">
               </div>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="addon-wrapping">Arrival rate(in minute)</span>
                 </div>
-                <input type="number" name="" class="AR" value="35" placeholder="arrival time">
+                <input type="number" name="" class="AR" value="50" placeholder="arrival time">
               </div>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="addon-wrapping">Service rate(in minute)</span>
                 </div>
-                <input type="number" name="" class="SR" value="0.75" placeholder="service rate">
+                <input type="number" name="" class="SR" value="0.95" placeholder="service rate">
               </div>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -47,7 +87,7 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="addon-wrapping">Simulate speed(in ms)</span>
                 </div>
-                <input type="number" class="SS" value="1000" placeholder="speed">
+                <input type="number" class="SS" value="50" placeholder="speed">
               </div>
               <input type="button" class="btn send" value="Simulate" onclick="run(this.value)">
               <input type="button" class="btn stop" value="Stop" onclick="run(this.value)">
@@ -65,19 +105,7 @@
 
       </div>
     </div>
-    <div class="clock" id="clock">
-      <div class="outer-clock-face">
-        <div class="marking marking-one"></div>
-        <div class="marking marking-two"></div>
-        <div class="marking marking-three"></div>
-        <div class="marking marking-four"></div>
-        <div class="inner-clock-face">
-          <div class="hand hour-hand"></div>
-          <div class="hand min-hand"></div>
-          <div class="hand second-hand"></div>
-        </div>
-      </div>
-    </div>
+
     <div class=".table3_1 " id="output"></div>
     <script src="main.js"></script>
 </body>

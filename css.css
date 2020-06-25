@@ -57,6 +57,43 @@ h1{
     padding: 50px;
 }
 
+.shop{
+  height: 350px;
+  background-color: #dcd6f7;
+}
+
+.shop_name{
+  width: 500px;
+  height: 100px;
+  font-weight: 900;
+  font-size: 40px;
+  text-align: center;
+  padding: 15px;
+  /* margin: 0 auto; */
+  border: 10px solid #a6b1e1;
+  box-shadow: 10px 10px #888888;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item_name{
+  background-color: #888888;
+}
+.item_name img{
+  width: 100px;
+  /* height: 40px; */
+}
+
+.item_title{
+  text-align: center;
+  font-size: 23px;
+  font-weight: 500;
+}
+
 .input-group-text{
   width: 200px;
 }
@@ -158,16 +195,15 @@ table tr:nth-child(even){
 }
 
 .clock {
-  width: 30rem;
-  height: 30rem;
-  border: 7px solid #545271;
+  width: 10rem;
+  height: 10rem;
+  border: 2px solid #545271;
   border-radius: 50%;
-  margin: 50px auto;
-  position: relative;
-  padding: 2rem;
+  /* margin: 50px auto; */
+  /* position: relative; */
   -webkit-box-shadow: 0 20px 30px rgba(104,75,106,0.65);
   -moz-box-shadow: 0 20px 30px rgba(104,75,106,0.65);
-  box-shadow: 0 20px 30px rgba(104,75,106,0.65);
+  /* box-shadow: 0 20px 30px rgba(104,75,106,0.65); */
   background: #545271;
 }
 
@@ -260,8 +296,8 @@ table tr:nth-child(even){
 .hand {
   width: 50%;
   right: 50%;
-  height: 6px;
-  background: #61afff;
+  height: 3px;
+  background: #a6b1e1;
   position: absolute;
   top: 50%;
   border-radius: 6px;
@@ -282,6 +318,6 @@ table tr:nth-child(even){
 }
 
 .hand.second-hand {
-  background: #ff5e5e;
+  background: #efb1ff;
   width: 40%;
 }
